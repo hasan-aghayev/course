@@ -1,0 +1,115 @@
+/* --- ОБЩИЕ СТИЛИ И ПЕРЕМЕННЫЕ --- */
+:root {
+    --text-color: #222;
+    --primary-color: #e63946;
+    --background-light: #f8f8f8;
+    --border-color: #eee;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: #fff;
+    /* Лучше белый фон для основной части */
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+}
+
+p {
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Убрал вертикальный padding, чтобы секции управляли этим */
+    box-sizing: border-box;
+}
+
+/* --- HEADER --- */
+.site__header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    /* Белый фон лучше для sticky-хедера */
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav__item {
+    margin-right: 20px;
+}
+
+/* --- HERO SECTION --- */
+.hero__section {
+    min-height: 70vh;
+    background: url('/dist/img/h2-new-slider2.jpg') no-repeat center center / cover;
+    color: #fff;
+    /* Белый цвет текста для темного фона */
+    display: flex;
+    align-items: center;
+}
+
+.hero__section .hero__text {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero__section .hero__title {
+    font-size: 3.5em;
+    color: #fff;
+    /* Переопределяем цвет заголовка на белый */
+    margin: 0.2em 0 0.5em;
+}
+
+.hero__section .button {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* --- FOOTER --- */
+.site__footer {
+    background-color: var(--background-light);
+    border-top: 1px solid var(--border-color);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 40px;
+}
